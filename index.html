@@ -177,7 +177,7 @@
            <button class="close" data-dismiss="modal">
              <span>&times;</span>
            </button>
-           <iframe src="" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+           <iframe src="" frameborder="0" height="350" width="100%" allow="autoplay" allowfullscreen></iframe>
          </div>
        </div>
      </div>
@@ -198,6 +198,21 @@
         interval: 6000,
         pause: 'hover'
       });
+
+      //video play
+     $(function (){
+       //Auto play modal video
+       $(".video").click(function(){
+          var theModal = $(this).data("target"),
+              videoSRC = $(this).attr("data-video"),
+              videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+          $(theModal + ' iframe').attr('src', videoSRCauto);
+          $(theModal + ' button.close').click(function(){
+            $(theModal + ' iframe').attr('src', videoSRC);
+          });
+       });
+     });
+
   </script>
 </body>
 </html>
