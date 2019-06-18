@@ -20,3 +20,12 @@
 .carousel-image-3 {
   background: url("../img/image3.jpg");
   background-size: cover; }
+
+#home-heading {
+  position: relative;
+  min-height: 200px;
+  background: url("../img/lights.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #ffffff; }
